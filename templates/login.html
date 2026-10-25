@@ -2,16 +2,22 @@
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <title>Вхід</title>
+    <title>Авторизація</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h2>Форма входу</h2>
-    <form>
-        <label>Логін:</label><br>
-        <input type="text" name="username"><br>
-        <label>Пароль:</label><br>
-        <input type="password" name="password"><br><br>
-        <button type="submit">Увійти</button>
-    </form>
+    <div class="container">
+        <h2>Вхід у систему</h2>
+        <form method="POST" action="/login">
+            <label>Логін:</label><br>
+            <input type="text" name="username" required><br>
+
+            <label>Пароль:</label><br>
+            <input type="password" name="password" required><br>
+
+            <button type="submit">Увійти</button>
+        </form>
+        <p><a href="/">На головну</a></p>
+    </div>
 </body>
 </html>
